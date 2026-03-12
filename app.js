@@ -21,6 +21,14 @@ function addItem(text) {
 function toggleDone(li) {
   li.classList.toggle('done');
 
+  if (li.classList.contains('done')) {
+    li.dataset.originalText = li.dataset.originalText || li.textContent.replace(/^✅\s*/, '');
+    li.textContent = `✅ ${li.dataset.originalText}`;
+  } else {
+    li.textContent = li.dataset.originalText || li.textContent.replace(/^✅\s*/, '');
+  }
+
   doneCount += li.classList.contains('done') ? 1 : -1;
   updateTitle();
 }
+
