@@ -20,4 +20,7 @@ function addItem(text) {
 // Função alvo de CONFLITO na Aula 2:
 function toggleDone(li) {
   li.classList.toggle('done');
+
+  doneCount += li.classList.contains('done') ? 1 : -1;
+  updateTitle();
 }
