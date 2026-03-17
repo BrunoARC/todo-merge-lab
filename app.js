@@ -6,7 +6,11 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const text = input.value.trim();
   if (!text) return;
+<<<<<<< HEAD
   if(text.length > 2){
+=======
+  if(text.length > 5){
+>>>>>>> parent of 9b1bc77 (Revert "refactor(addItem): valida tamanho mínimo 5")
     addItem(text);
     input.value = '';
   }
