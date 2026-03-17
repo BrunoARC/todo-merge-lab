@@ -6,8 +6,10 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const text = input.value.trim();
   if (!text) return;
-  addItem(text);
-  input.value = '';
+  if(text.length > 2){
+    addItem(text);
+    input.value = '';
+  }
 });
 
 function addItem(text) {
