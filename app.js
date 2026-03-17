@@ -6,7 +6,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const text = input.value.trim();
   if (!text) return;
-  if(text.length > 5){
+  if(text.length > 3){
     addItem(text);
     input.value = '';
   }
