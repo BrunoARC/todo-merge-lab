@@ -6,7 +6,7 @@ form.addEventListener('submit', (e) => {
   e.preventDefault();
   const text = input.value.trim();
   if (!text) return;
-  if(text.length > 3){
+  if(text.length > 2){
     addItem(text);
     input.value = '';
   }
@@ -31,6 +31,6 @@ function toggleDone(li) {
   }
 
   doneCount += li.classList.contains('done') ? 1 : -1;
-  updateTitle();clear
+  updateTitle();
 }
 
